@@ -31,3 +31,5 @@ The `temperature`, `pressure` and `humidity` functions are convenience functions
 * `get_temperature()`: returns the temperature in hundredths of a degree celsius. For example, the value 2534  indicates a temperature of 25.34 degrees.
 * `get_pressure()`: returns the atmospheric pressure. This 32-bit value consists of 24 bits indicating the integer value, and 8 bits indicating the fractional value. To get a value in Pascals, divide the return value by 256. For example, a value of 24674867 indicates 96386.2Pa, or 963.862hPa.
 * `get_humidity()`: returns the relative humidity. This 32-bit value consists of 22 bits indicating the integer value, and 10 bits indicating the fractional value. To get a value in %RH, divide the return value by 1024. For example, a value of 47445 indicates 46.333%RH.
+
+**Note:** In order to get a new measurment and updated values `get_temperature()` or `temperature()` has to be called. Multiple calls to `pressure()` or `humidity()` will return no new data!
